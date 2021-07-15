@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Library</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body id="bg">
+        <div><h1 id="title"> <b>Library</b> </h1></div>
+        <div id="box">
+
+<button onclick="document.getElementById('id01').style.display='block'"> <b>Add Book</b> </button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+  <form id="bookadd" action="#" class="modal-content" onsubmit="return addBookToLibrary(form.elements[0].value, form.elements[1].value, form.elements[2].value,form.elements[3].value);">
+    <div class="container">
+      <h1>New Book</h1>
+      <hr>
+      <label for="title"><b>Title</b></label>
+      <input type="text" placeholder="Enter Book Title" name="title" required>
+
+      <label for="author"><b>Author</b></label>
+      <input type="text" placeholder="Enter Author's name" name="author" required>
+
+      <label id="pg" for="pages"><b>Pages</b></label>
+      <input id="pgn" type="number" placeholder="Enter number of pages" name="pages" required>
+
+      <label>
+        <select id="rd" name="read" style="margin-bottom:15px">
+          <option value="Read">Read</option>
+          <option value="Not read yet">Not read yet</option>
+          </select>
+      </label>
+
+      <div class="clearfix">
+        <button id="cncl" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id=btnadd type="submit" class="addbook">Add Book</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+        <script src="/scripts/script.js"></script>
+    </body>
+</html>
