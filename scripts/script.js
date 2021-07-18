@@ -6,11 +6,13 @@ let myLibrary = [
     { title: "The Republic", author: "Plato", pages: "700", read: "Read" },
     { title: "Discourses", author: "Epictetus", pages: "383", read: "Read" },
 ];
-function Book(title, author, pages, read) {
+class Book{
+    constructor(title, author, pages, read) {
     this.title = title
     this.author = author
     this.pages = pages
     this.read = read
+}
 }
 function addBookToLibrary(title, author, pages, read) {  
     if (!arguments || title == "" || author == "" || pages == "") { 
